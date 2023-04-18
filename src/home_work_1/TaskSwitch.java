@@ -8,6 +8,11 @@ public class TaskSwitch {
         System.out.print("Input name: ");
         String name = in.nextLine();
 
+        if (!name.chars().allMatch(Character::isLetter) || name.isEmpty()) { // проверка на использование только букв и остутвие пустой строки. Не буквы и пустая строка, то вывыести сообщение
+            System.out.println("Так имена не пишут!");
+            return; //точка выхода из программы, если условие сработало
+        }
+
         switch (name) { //добавляем введенное имя в поле для сравнения спомощью команды switch
             case "Вася": //первое сравнение ввода с значением Вася
                 System.out.print("Привет! \nЯ тебя так долго ждал");
@@ -18,6 +23,5 @@ public class TaskSwitch {
             default: // может и не быть, но добавлен для ввывода сообщения ниже, если все кейсы выше false
                 System.out.println("Добрый день, а вы кто?");
         }
-
     }
 }

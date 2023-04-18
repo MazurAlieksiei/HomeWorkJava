@@ -6,7 +6,7 @@ public class TaskIfElse1 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);// обявляем переменную относящуюся к классу Scanner
-        System.out.print("Input name: ");
+        System.out.print("Input name: ");// запрашиваем у пользовтеля ввод имени через консоль
         String name = in.nextLine(); // объявляем переменную с типом String и используем метод для считывания всей введенной строки
 
         if (name.equals("Вася")) { // сравниваем введенную строку и имя

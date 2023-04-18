@@ -15,6 +15,5 @@ public class BitwiseOperations1 {
 
         System.out.println("Результат побитного 'И': " + firstResult);
         System.out.println("Результат побитного 'ИЛИ': " + secondResult);
-
     }
 }

@@ -5,11 +5,11 @@ public class BitwiseOperations2 {
 
         double firstNumber = 42.5;
         double secondNumber = 5.0;
-        double firstResult = firstNumber & secondNumber;
-        double secondResult = firstNumber | secondNumber;
+        //double firstResult = firstNumber & secondNumber;
+        //double secondResult = firstNumber | secondNumber;
 
-        System.out.println("Результат побитного 'И': " + firstResult);
-        System.out.println("Результат побитного 'ИЛИ': " + secondResult);
+        // System.out.println("Результат побитного 'И': " + firstResult);
+        // System.out.println("Результат побитного 'ИЛИ': " + secondResult);
     }
 }
 // побитовые операторы не моугт быть примененены к типам с плавающей точкой (вещестьвенным типам: float и double)

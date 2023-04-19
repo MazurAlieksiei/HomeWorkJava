@@ -8,12 +8,12 @@ public class TaskDivisibility {
         int firstNumber = in.nextInt();
         int secondNumber = in.nextInt();
 
-        if (firstNumber == 0 || secondNumber == 0){
+        if (firstNumber == 0 || secondNumber == 0) {
             System.out.println("Ноль вводить нельзя!");
             return;
         }
 
-        if (firstNumber % secondNumber == 0){
+        if (firstNumber % secondNumber == 0) {
             System.out.printf("%d делится на %d\n", firstNumber, secondNumber);
             System.out.printf("Частное: %d", (firstNumber / secondNumber));
         } else {

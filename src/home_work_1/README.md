@@ -13,3 +13,5 @@
 Задание 6.2 - TaskIfElse2
 Задание 6.3 - TaskSwitch
 Задание 7 - TaskPhoneNumber
+Задание 8 - TaskToBinaryString - сложный вариант (скорее всего, как предполагает задание)
+Задание 8 - TaskToBinaryStringEasyVariant - с применением ухищрений

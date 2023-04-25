@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TaskToBinaryString {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите число: ");
+        System.out.print("Введите число в диапазоне [-128;127]: ");
         byte number = in.nextByte();
 
         System.out.println(toBinary(number));

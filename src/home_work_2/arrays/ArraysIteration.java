@@ -9,7 +9,7 @@ import static home_work_2.utils.ArrayUtils.find;
 public class ArraysIteration {
     public static void main(String[] args) {
 
-        elementsOutput ();
+        elementsOutput();
         System.out.println("\n"); // для большей информативности вывода в консоли - два пробела
         everySecondElement();
         System.out.println("\n");
@@ -25,25 +25,25 @@ public class ArraysIteration {
 //        int[] array = arrayFromConsole();
 //        for (int i = 0; i < array.length; i++){
 //            int element = array[i];
-//            System.out.print(element + " ");
+//            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
 //        }
 //        int[] array = arrayFromConsole();
 //        int i = 0;
 //        while (i < array.length){
 //            int element = array[i];
-//            System.out.print(element + " ");
+//            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
 //            i++;
 //        }
         int[] array = arrayFromConsole();
         int i = 0;
         do {
             int element = array[i];
-            System.out.print(element + " ");
+            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
             i++;
         } while (i < array.length);
     }
 
-    public static void everySecondElement(){
+    public static void everySecondElement() {
 //        int[] array = arrayFromConsole();
 //        for (int i = 1; i < array.length; i+= 2){
 //            int element = array[i];
@@ -69,14 +69,14 @@ public class ArraysIteration {
         int index = 0;
         for (int element : array) {
 //            int index = find(array, element); // добавил дополнительный метод в ArrayUtils, для поиска индекса элемента массива
-            if (index % 2 != 0){
+            if (index % 2 != 0) {
                 System.out.print(element + " ");
             }
             index++;
         }
     }
 
-    public static void reversElementsOutput (){
+    public static void reversElementsOutput() {
 //        int[] array = arrayFromConsole();
 //        for (int i = array.length -1; i >= 0; i--){
 //            int element = array[i];

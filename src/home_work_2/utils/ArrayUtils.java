@@ -4,26 +4,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayUtils {
-    public static int[] arrayFromConsole(){
+    public static int[] arrayFromConsole() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
         int arraySize = in.nextInt();
-        int [] userArray = new int[arraySize];
+        int[] userArray = new int[arraySize];
         System.out.print("Введите элементы массива через пробел: ");
 
-        for (int i = 0; i < userArray.length; i++){
+        for (int i = 0; i < userArray.length; i++) {
             userArray[i] = in.nextInt();
         }
         return userArray;
     }
 
 
-    public static int[] arrayRandom(int size, int maxValueExclusion){
+    public static int[] arrayRandom(int size, int maxValueExclusion) {
         int[] randomArray = new int[size];
         Random random = new Random();
 
-        for (int i = 0; i < randomArray.length; i++){
-            randomArray [i] = random.nextInt(maxValueExclusion);
+        for (int i = 0; i < randomArray.length; i++) {
+            randomArray[i] = random.nextInt(maxValueExclusion);
         }
         return randomArray;
     }

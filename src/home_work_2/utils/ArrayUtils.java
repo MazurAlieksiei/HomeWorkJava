@@ -28,9 +28,15 @@ public class ArrayUtils {
         return randomArray;
     }
 
-    public static int find(int[] a, int target) {
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == target) {
+    /**
+     * Метод поиска индекса элемента, на основании переданных параметров.
+     * @param array массив для поиска
+     * @param element элемент, индекс которого необходимо узнать
+     * @return индекс элемента в массиве. Если элемент не найден вернет -1
+     */
+    public static int find(int[] array, int element) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
                 return i;
             }
         }

@@ -64,7 +64,7 @@ public class LoopsTasks {
             }
         }
         double result = ((randomEvenDigitsAmount / digitsAmount) * 100);
-        System.out.println(result + " % ");
+        System.out.println("Процент четных числе составляет: " + result + " % ");
     }
 
     public static void evenAndOddNumbers() {

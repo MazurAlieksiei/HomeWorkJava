@@ -8,7 +8,7 @@ public class NumberDigitsMultiplication {
         }
 
         if (!args[0].chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
-            if (args[0].contains(".")){ //если введено число с точкой
+            if (args[0].contains(".") || args[0].contains(",")){ //если введено число с точкой
                 System.out.println("Введено не целое число");
                 return;
             }

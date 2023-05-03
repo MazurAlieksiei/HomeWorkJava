@@ -1,0 +1,273 @@
+<mxfile host="app.diagrams.net" modified="2023-05-03T15:09:27.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="eMkd-LN3kMoYbH4PITdV" version="21.2.4" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2261" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="KtreN7q95QRZagC4hST3-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-0" target="KtreN7q95QRZagC4hST3-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-0" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="30" y="10" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-1" target="KtreN7q95QRZagC4hST3-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-1" value="Создать переменну, хранящую индекс кранего левого элемента массива,равную 0&lt;br&gt;(int leftBorder = 0)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="10" y="140" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-3" target="KtreN7q95QRZagC4hST3-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-3" value="Создать переменну, хранящую индекс кранего правого элемента массива,равную динна массива - 1&lt;br&gt;(int rightBorder = array.lenght - 1)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-40" y="240" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-5" target="KtreN7q95QRZagC4hST3-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-5" value="Задать массив для сортировки&lt;br&gt;int[] array = new int[]" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="30" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-8" target="KtreN7q95QRZagC4hST3-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-8" value="Создать переменную - маркер наличия изменений в цикле, равную 1&lt;br&gt;(changes = 1;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="5" y="350" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-10" value="Условие:&lt;br&gt;1. Сомкнулись ли лева и правая границы цикла?&lt;br&gt;(leftBorder &amp;lt; rightBorder)&lt;br&gt;И&lt;br&gt;2. Маркер изменений больше нуля?&lt;br&gt;(changes &amp;gt; 0)" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-115" y="455" width="410" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="KtreN7q95QRZagC4hST3-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-115" y="534.5" as="sourcePoint" />
+            <mxPoint x="-290" y="535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-16" value="ДА" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" parent="KtreN7q95QRZagC4hST3-15" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-17" target="KtreN7q95QRZagC4hST3-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-17" value="Присвоить значение переменной - маркеру 0&lt;br&gt;(changes = 0;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-340" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-20" target="KtreN7q95QRZagC4hST3-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-20" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-290" y="525" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-26" target="KtreN7q95QRZagC4hST3-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-26" value="Цикл i от leftBorder&lt;br&gt;до rightBorder" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-330" y="740" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-29" value="Следующий элемент массива меньше&amp;nbsp;&lt;br&gt;текущего?&lt;br&gt;(array[i] &amp;gt; array[i + 1])" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-447.5" y="850" width="335" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-31" target="KtreN7q95QRZagC4hST3-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-31" value="Создать промежуточную переменную, храняющую значение текущего элемента&lt;br&gt;int tmp = array[i]" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-640" y="950" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-32" target="KtreN7q95QRZagC4hST3-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-565" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-32" value="Присвоить текущему элементу значение следующего элемента&lt;br&gt;(array[i] = array [i +1])" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-640" y="1040" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-33" target="KtreN7q95QRZagC4hST3-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-33" value="м" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-640" y="1140" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-34" target="KtreN7q95QRZagC4hST3-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-34" value="Задать переменной - маркеру значение,&lt;br&gt;&amp;nbsp;равное 1&lt;br&gt;(changes = 1)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-640" y="1230" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-35" target="KtreN7q95QRZagC4hST3-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-35" value="Увеличить i на 1&lt;br&gt;Цикл i" style="shape=loopLimit;whiteSpace=wrap;html=1;direction=west;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-330" y="1290" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-39" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-290" y="1250" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-41" target="KtreN7q95QRZagC4hST3-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-41" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-290" y="1250" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-43" value="" style="endArrow=classic;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=0.5;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="KtreN7q95QRZagC4hST3-41" edge="1" source="KtreN7q95QRZagC4hST3-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-280.5" y="980" as="sourcePoint" />
+            <mxPoint x="-280.5" y="1071" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-112" y="1080" />
+              <mxPoint x="-280" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-44" value="НЕТ" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" parent="KtreN7q95QRZagC4hST3-43" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.3;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="KtreN7q95QRZagC4hST3-48" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-425" y="914.5" as="sourcePoint" />
+            <mxPoint x="-560" y="915" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-46" value="ДА" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" parent="KtreN7q95QRZagC4hST3-45" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-48" target="KtreN7q95QRZagC4hST3-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-48" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-575" y="905" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-53" target="jBKO1gSw6JuVVZDMo3Bu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-53" value="Сдвинуть правую границу массива на 1&lt;br&gt;(rightBorder--)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-140" y="1300" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-58" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="65" y="690" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-59" value="" style="endArrow=classic;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="615" as="sourcePoint" />
+            <mxPoint x="90" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-60" value="НЕТ" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" parent="KtreN7q95QRZagC4hST3-59" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YwUTmnkQDoey7_b0Xufw-0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KtreN7q95QRZagC4hST3-61" target="KtreN7q95QRZagC4hST3-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-61" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="410" y="10" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KtreN7q95QRZagC4hST3-62" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="375" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-0" target="jBKO1gSw6JuVVZDMo3Bu-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-0" value="Цикл i от rightBorder&lt;br&gt;до leftBorder" style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="447.5" y="740" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-1" value="Предыдущий элемент массива больше&lt;br&gt;текущего?&lt;br&gt;(array[i -1] &amp;gt; array[i])" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="850" width="335" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-3" target="jBKO1gSw6JuVVZDMo3Bu-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-3" value="Создать промежуточную переменную, храняющую значение текущего элемента&lt;br&gt;int tmp = array[i]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="950" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-4" target="jBKO1gSw6JuVVZDMo3Bu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-4" value="Присвоить текущему элементу значение предыдущего элемента&lt;br&gt;(array[i] = array [i -1])" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="1040" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-5" target="jBKO1gSw6JuVVZDMo3Bu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-5" value="Записываем в предыдущий элемент значение текущего элемента&lt;br&gt;(array [i +-1] = tmp)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="1140" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-6" target="jBKO1gSw6JuVVZDMo3Bu-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-6" value="Задать переменной - маркеру значение,&lt;br&gt;&amp;nbsp;равное 1&lt;br&gt;(changes = 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="1230" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-7" target="jBKO1gSw6JuVVZDMo3Bu-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-7" value="Уменьшить i на 1&lt;br&gt;Цикл i" style="shape=loopLimit;whiteSpace=wrap;html=1;direction=west;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="447.5" y="1290" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-11" target="jBKO1gSw6JuVVZDMo3Bu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-11" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="487.5" y="1250" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-16" value="" style="endArrow=classic;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=0.5;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="990" as="sourcePoint" />
+            <mxPoint x="497.5" y="1260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="915" />
+              <mxPoint x="330" y="1080" />
+              <mxPoint x="498" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-17" value="НЕТ" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" connectable="0" vertex="1" parent="jBKO1gSw6JuVVZDMo3Bu-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-18" target="jBKO1gSw6JuVVZDMo3Bu-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-18" value="Сдвинуть правую границу массива на 1&lt;br&gt;(rightBorder--)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="230" y="1300" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-20" value="2" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-102.5" y="1180" width="55" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-22" target="jBKO1gSw6JuVVZDMo3Bu-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-22" value="2" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="470" y="640" width="55" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-24" target="jBKO1gSw6JuVVZDMo3Bu-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-24" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="1320" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-26" target="jBKO1gSw6JuVVZDMo3Bu-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-26" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="790" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-28" target="jBKO1gSw6JuVVZDMo3Bu-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-28" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="790" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jBKO1gSw6JuVVZDMo3Bu-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="450" />
+              <mxPoint x="130" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jBKO1gSw6JuVVZDMo3Bu-30" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="435" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

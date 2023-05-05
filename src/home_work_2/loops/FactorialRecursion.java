@@ -2,7 +2,6 @@ package home_work_2.loops;
 
 public class FactorialRecursion {
     public static void main(String[] args) {
-
         if (args.length == 0) {
             System.out.println("Не корректный ввод!");
             return;
@@ -22,14 +21,23 @@ public class FactorialRecursion {
             System.out.println("Введите число меньше либо равное 20");
             return;
         }
-        System.out.println(number);
-        System.out.println("= " + getFactorial(number));
+        System.out.println("Число, факториал которого необходим: " + number);
+        /*цикл для вывода все чисел при вычислении факториала
+        для формирования строки определенного вида */
+        for (int i = 1; i <= number; i++) {
+            if (i == number) {
+                System.out.print(i + " = ");
+            } else {
+                System.out.print(i + " * ");
+            }
+        }
+        System.out.println(getFactorial(number));
     }
 
     /**
-     * Метод нахождения факториала числа с помощью рекурсии
-     * @param number число, факториал которого необходимо найти
-     * @return возвращает значение факториала числа
+     * Метод нахождения факториала числа с помощью рекурсии.
+     * @param number Число, факториал которого необходимо найти.
+     * @return Возвращает значение факториала числа.
      */
     public static long getFactorial(long number) {
         long result;
@@ -38,7 +46,6 @@ public class FactorialRecursion {
             return 1;
         }
         result = getFactorial(number - 1) * number;
-        System.out.print(number + " * ");
         return result;
     }
 }

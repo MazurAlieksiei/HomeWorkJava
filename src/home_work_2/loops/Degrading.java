@@ -38,6 +38,12 @@ public class Degrading {
 
     }
 
+    /**
+     * Метод возведения в степень.
+     * @param number Возводимое в степень число.
+     * @param degree Степень, в которую возводят число.
+     * @return Значение возведения в степень числа.
+     */
     public static double degradingMethod(double number, int degree) {
         double result = 1;
         for (int i = 1; i <= degree; i++) {

@@ -20,7 +20,7 @@ public class MultiplyLong {
      * Метод перемножения числа на заданный множитель. Умножает до переполнения long.
      * Выводит число перед переполнением и после переполнения.
      *
-     * @param a             Число для умножения.
+     * @param a Число для умножения.
      * @param multiplier Множитель.
      */
     public static void multiply(long a, int multiplier) {

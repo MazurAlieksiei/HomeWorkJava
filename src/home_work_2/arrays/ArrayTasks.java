@@ -21,6 +21,9 @@ public class ArrayTasks {
         sumOfDigits();
     }
 
+    /**
+     * Метод вычисляет сумму четных положительных элементов массива. Массив заполняется случайными числами.
+     */
     public static void sumOddElements() {
         int size = 50;
         int maxValueExclusion = 100;
@@ -38,6 +41,9 @@ public class ArrayTasks {
         System.out.println("Сумма равна: " + sum);
     }
 
+    /**
+     * Метод находит максимальный из элементов массива с четными индексами. Массив заполняется случайными числами.
+     */
     public static void maxFromOddElements() {
         int size = 50;
         int maxValueExclusion = 100;
@@ -52,6 +58,10 @@ public class ArrayTasks {
         System.out.println("Максимальный элемент: " + maxElement);
     }
 
+    /**
+     * Метод находит элементы массива, которые меньше среднего арифметического.
+     * Массив заполняется случайными числами.
+     */
     public static void lessArithmeticMean() {
         int size = 50;
         int maxValueExclusion = 100;
@@ -70,6 +80,9 @@ public class ArrayTasks {
         }
     }
 
+    /** Метод находит два наименьших (минимальных) элемента массива.
+     * Массив заполняется случайными числами.
+     */
     public static void twoSmallestElements() {
         int size = 10;
         int maxValueExclusion = 100;
@@ -102,6 +115,9 @@ public class ArrayTasks {
         System.out.println("Второй элемент: " + array[min2]);
     }
 
+    /** Метод сжимает массив, удалив элементы, принадлежащие интервалу.
+     * Массив заполняется случайными числами.
+     */
     public static void arrayCompression() {
         int size = 50;
         int maxValueExclusion = 100;
@@ -134,6 +150,9 @@ public class ArrayTasks {
         System.out.println();
     }
 
+    /** Метод находит сумму цифр массива.
+     * Массив заполняется случайными числами.
+     */
     public static void sumOfDigits() {
         int size = 10;
         int maxValueExclusion = 100;

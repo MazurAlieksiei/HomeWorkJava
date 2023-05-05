@@ -25,6 +25,11 @@ public class FactorialCheck {
         System.out.println("Факториал числа: " + getFactorial(number));
     }
 
+    /**
+     * Метод вычисления факториала числа.
+     * @param number Числа, факториал которого необходимо вычислить.
+     * @return Возвращает значение факториала числа, введенного пользователем.
+     */
     public static long getFactorial(long number) {
         long result = 1;
         for (long i = 1; i <= number; i++) {

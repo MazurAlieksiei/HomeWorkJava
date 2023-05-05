@@ -18,6 +18,9 @@ public class LoopsTasks {
         reversNumber();
     }
 
+    /**
+     * Метод находит наибольшую цифру натурального числа, введенного пользователем.
+     */
     public static void largestDigit() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите натуральное число: ");
@@ -52,10 +55,11 @@ public class LoopsTasks {
         System.out.println("Максимальная цифра числа: " + maxNumber);
     }
 
+    /**
+     * Метод находит вероятность генерации четных случайных чисел.
+     */
     public static void evenNumbersProbability() {
-        //Random random = new Random();
         int digitsAmount = 1000;
-        //int randomDigits = random.nextInt(100);
         double randomEvenDigitsAmount = 0;
         for (int i = 0; i < digitsAmount; i++) {
             int a = (int) (Math.random() * 100);
@@ -67,6 +71,9 @@ public class LoopsTasks {
         System.out.println("Процент четных числе составляет: " + result + " % ");
     }
 
+    /**
+     * Метод считает четные и нечетные цифры числа, введенного пользователем.
+     */
     public static void evenAndOddNumbers() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите натуральное число: ");
@@ -104,6 +111,9 @@ public class LoopsTasks {
         System.out.println("четных " + even + ", нечетных " + odd);
     }
 
+    /**
+     * Метод выводит элементы ряда Фибоначчи, количество которых указано пользователем.
+     */
     public static void fibonacciSeries() {
         Scanner in = new Scanner(System.in);
         System.out.print("Укажите сколько элементов ряда Фибоначчи вывести: ");
@@ -120,6 +130,9 @@ public class LoopsTasks {
         }
     }
 
+    /**
+     * Метод выводит ряд чисел в диапазоне с шагом. "От" и "до", и "шаг" указывается пользователем.
+     */
     public static void rangeOfNumbers() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите минимальное число: ");
@@ -134,6 +147,9 @@ public class LoopsTasks {
         }
     }
 
+    /**
+     * Метод выводит перевернутое число. Число, переворот которого требуется, вводит пользователь.
+     */
     public static void reversNumber() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите число для переворота: ");

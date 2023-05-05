@@ -4,6 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayUtils {
+
+    /**
+     * Метод создания массива пользователем. Принимает от пользователя размер массива
+     * и его элементы.
+     * @return Возвращает созданный пользователем массив
+     */
     public static int[] arrayFromConsole() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
@@ -17,7 +23,12 @@ public class ArrayUtils {
         return userArray;
     }
 
-
+    /**
+     * Метод создания массива, путем заполнения его рандомными числами.
+     * @param size Переменная, хранящая размер массива
+     * @param maxValueExclusion Переменная, хранящая максимальное число диапазона.
+     * @return Возвращает созданный массив с рандомными элементами.
+     */
     public static int[] arrayRandom(int size, int maxValueExclusion) {
         int[] randomArray = new int[size];
         Random random = new Random();

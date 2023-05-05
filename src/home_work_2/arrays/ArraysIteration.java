@@ -1,10 +1,6 @@
 package home_work_2.arrays;
 
-import java.util.Arrays;
-import java.util.List;
-
 import static home_work_2.utils.ArrayUtils.arrayFromConsole;
-import static home_work_2.utils.ArrayUtils.find;
 
 public class ArraysIteration {
     public static void main(String[] args) {
@@ -17,25 +13,30 @@ public class ArraysIteration {
 
     }
 
+    /**
+     * Метод выводит элементы массива. Размер массива и его элементы вводятся пользователем.
+     */
     public static void elementsOutput() {
-//        for (int element : arrayFromConsole()){
-//            System.out.print(element + " ");
-//        }
+        for (int element : arrayFromConsole()) {
+            System.out.print(element + " ");
+        }
 
-//        int[] array = arrayFromConsole();
-//        for (int i = 0; i < array.length; i++){
-//            int element = array[i];
-//            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
-//        }
-//        int[] array = arrayFromConsole();
-//        int i = 0;
-//        while (i < array.length){
-//            int element = array[i];
-//            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
-//            i++;
-//        }
         int[] array = arrayFromConsole();
+        for (int i = 0; i < array.length; i++) {
+            int element = array[i];
+            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
+        }
+
+        array = arrayFromConsole();
         int i = 0;
+        while (i < array.length) {
+            int element = array[i];
+            System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
+            i++;
+        }
+
+        array = arrayFromConsole();
+        i = 0;
         do {
             int element = array[i];
             System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
@@ -43,32 +44,36 @@ public class ArraysIteration {
         } while (i < array.length);
     }
 
+    /**
+     * Метод выводит каждый второй элемент массива. Размер массива и его элементы вводятся пользователем.
+     */
     public static void everySecondElement() {
-//        int[] array = arrayFromConsole();
-//        for (int i = 1; i < array.length; i+= 2){
-//            int element = array[i];
-//            System.out.print(element + " ");
-//        }
-//        int[] array = arrayFromConsole();
-//        int i = 1;
-//        while (i < array.length) {
-//            int element = array[i];
-//            System.out.print(element + " ");
-//            i += 2;
-//        }
-//        int[] array = arrayFromConsole();
-//        int i = 1;
-//        do {
-//            int element = array[i];
-//            System.out.print(element + " ");
-//            i+=2;
-//        } while (i < array.length);
-
-
         int[] array = arrayFromConsole();
+        for (int i = 1; i < array.length; i += 2) {
+            int element = array[i];
+            System.out.print(element + " ");
+        }
+
+        array = arrayFromConsole();
+        int i = 1;
+        while (i < array.length) {
+            int element = array[i];
+            System.out.print(element + " ");
+            i += 2;
+        }
+
+        array = arrayFromConsole();
+        i = 1;
+        do {
+            int element = array[i];
+            System.out.print(element + " ");
+            i += 2;
+        } while (i < array.length);
+
+        array = arrayFromConsole();
         int index = 0;
         for (int element : array) {
-//            int index = find(array, element); // добавил дополнительный метод в ArrayUtils, для поиска индекса элемента массива
+            // int index = find(array, element); // добавил дополнительный метод в ArrayUtils, для поиска индекса элемента массива
             if (index % 2 != 0) {
                 System.out.print(element + " ");
             }
@@ -76,27 +81,33 @@ public class ArraysIteration {
         }
     }
 
+    /** Метод выводит элементы массива в обратном порядке.
+     * Размер массива и его элементы вводятся пользователем.
+     */
     public static void reversElementsOutput() {
-//        int[] array = arrayFromConsole();
-//        for (int i = array.length -1; i >= 0; i--){
-//            int element = array[i];
-//            System.out.print(element + " ");
-//        }
-//        int[] array = arrayFromConsole();
-//        int i = array.length - 1;
-//        while (i >= 0){
-//            int element = array[i];
-//            System.out.print(element + " ");
-//            i--;
-//        }
-//        int[] array = arrayFromConsole();
-//        int i = array.length - 1;
-//        do {
-//            int element = array[i];
-//            System.out.print(element + " ");
-//            i--;
-//        } while (i >= 0);
         int[] array = arrayFromConsole();
+        for (int i = array.length - 1; i >= 0; i--) {
+            int element = array[i];
+            System.out.print(element + " ");
+        }
+
+        array = arrayFromConsole();
+        int i = array.length - 1;
+        while (i >= 0) {
+            int element = array[i];
+            System.out.print(element + " ");
+            i--;
+        }
+
+        array = arrayFromConsole();
+        i = array.length - 1;
+        do {
+            int element = array[i];
+            System.out.print(element + " ");
+            i--;
+        } while (i >= 0);
+
+        array = arrayFromConsole();
         int index = array.length;
         for (int element : array) {
 

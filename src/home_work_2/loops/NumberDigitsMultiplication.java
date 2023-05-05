@@ -24,6 +24,11 @@ public class NumberDigitsMultiplication {
         System.out.println(sumDigits(number));
     }
 
+    /**
+     * Метод перемножения всех цифр числа между собой.
+     * @param number Число, цифры которого необходимо перемножить.
+     * @return Возвращает результат перемножения всех цифр числа.
+     */
     public static long sumDigits (long number){
         String numberAsString = Long.toString(number);
         long[] digitsArray = new long[numberAsString.length()];

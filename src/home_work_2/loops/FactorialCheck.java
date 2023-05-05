@@ -22,7 +22,7 @@ public class FactorialCheck {
             return;
         }
 
-        System.out.println(getFactorial(number));
+        System.out.println("Факториал числа: " + getFactorial(number));
     }
 
     public static long getFactorial(long number) {

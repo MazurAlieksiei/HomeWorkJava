@@ -106,7 +106,7 @@ public class LoopsTasks {
 
     public static void fibonacciSeries() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Укажите сколько элементов вывести: ");
+        System.out.print("Укажите сколько элементов ряда Фибоначчи вывести: ");
         int numberOfElements = in.nextInt();
         int element1 = 1;
         int element2 = 2;
@@ -136,7 +136,7 @@ public class LoopsTasks {
 
     public static void reversNumber() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите число дял переворота: ");
+        System.out.print("Введите число для переворота: ");
         int number = in.nextInt();
 
         int reversNumber = 0;

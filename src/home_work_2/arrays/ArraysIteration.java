@@ -20,12 +20,14 @@ public class ArraysIteration {
         for (int element : arrayFromConsole()) {
             System.out.print(element + " ");
         }
+        System.out.println();
 
         int[] array = arrayFromConsole();
         for (int i = 0; i < array.length; i++) {
             int element = array[i];
             System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
         }
+        System.out.println();
 
         array = arrayFromConsole();
         int i = 0;
@@ -34,6 +36,7 @@ public class ArraysIteration {
             System.out.print(element + " "); //можно сразу писать array[i] в print, без введения новой переменной
             i++;
         }
+        System.out.println();
 
         array = arrayFromConsole();
         i = 0;
@@ -53,6 +56,7 @@ public class ArraysIteration {
             int element = array[i];
             System.out.print(element + " ");
         }
+        System.out.println();
 
         array = arrayFromConsole();
         int i = 1;
@@ -61,6 +65,7 @@ public class ArraysIteration {
             System.out.print(element + " ");
             i += 2;
         }
+        System.out.println();
 
         array = arrayFromConsole();
         i = 1;
@@ -69,6 +74,7 @@ public class ArraysIteration {
             System.out.print(element + " ");
             i += 2;
         } while (i < array.length);
+        System.out.println();
 
         array = arrayFromConsole();
         int index = 0;
@@ -90,6 +96,7 @@ public class ArraysIteration {
             int element = array[i];
             System.out.print(element + " ");
         }
+        System.out.println();
 
         array = arrayFromConsole();
         int i = array.length - 1;
@@ -98,6 +105,7 @@ public class ArraysIteration {
             System.out.print(element + " ");
             i--;
         }
+        System.out.println();
 
         array = arrayFromConsole();
         i = array.length - 1;
@@ -106,6 +114,7 @@ public class ArraysIteration {
             System.out.print(element + " ");
             i--;
         } while (i >= 0);
+        System.out.println();
 
         array = arrayFromConsole();
         int index = array.length;

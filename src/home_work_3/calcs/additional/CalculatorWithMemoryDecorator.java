@@ -2,13 +2,13 @@ package home_work_3.calcs.additional;
 
 import home_work_3.calcs.api.ICalculator;
 
-public class CalculatorWithMemory {
+public class CalculatorWithMemoryDecorator implements ICalculator {
     private ICalculator calculator;
     private double lastOperationResult;
 
     private double savedOperationResult;
 
-    public CalculatorWithMemory(ICalculator calculator) {
+    public CalculatorWithMemoryDecorator(ICalculator calculator) {
         this.calculator = calculator;
     }
 
@@ -55,5 +55,9 @@ public class CalculatorWithMemory {
         double temp = savedOperationResult;
         savedOperationResult = 0;
         return temp;
+    }
+
+    public ICalculator getCalculator() {
+        return this.calculator;
     }
 }

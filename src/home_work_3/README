@@ -1,0 +1,13 @@
+WithoutCalculatorMain - задание 1
+CalculatorWithOperator - задание 2
+CalculatorWithMathCopy - задание 3
+CalculatorWithMathExtends - задание 4
+CalculatorWithCounterClassic и CalculatorWithCounterClassicMain  - задание 5
+CalculatorWithCounterAutoSuper и CalculatorWithCounterAutoSuperMain  - задание 6
+CalculatorWithCounterAutoComposite и CalculatorWithCounterDelegateCompositeMain - задание 7
+CalculatorWithCounterAutoAgregation и CalculatorWithCounterDelegateAgregationMain  - задание 8
+CalculatorWithCounterAutoChoiceAgregation и CalculatorWithCounterDelegateChoiceAgregationMain - задание 9
+ICalculator - задание 10
+CalculatorWithCounterAutoAgregationInterface и CalculatorWithCounterAutoCompositeInterfaceMain - задание 11
+CalculatorWithMemory и CalculatorWithMemoryMain - задание 12
+CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator + CalculatorDecoratorMain - задание 13.1-13.6

@@ -11,11 +11,20 @@ public class CalculatorDecoratorMain {
                 new CalculatorWithCounterAutoDecorator(
                         new CalculatorWithMemoryDecorator(new CalculatorWithMathExtends()));
 
-        double tmp = iCalculator.adding(iCalculator.adding(4.1, iCalculator.multiplication(15, 7)), iCalculator.division(28, 5));
+        double tmp = iCalculator.adding(iCalculator.adding(4.1, iCalculator.multiplication(15, 7)),
+                iCalculator.division(28, 5));
         double result = iCalculator.degrading(tmp, 2);
 
         System.out.println(result);
-        System.out.println("Количество использований калькулятора: " + ((CalculatorWithCounterAutoDecorator) iCalculator).getCountOperation());
+        System.out.println("Количество использований калькулятора: " +
+                ((CalculatorWithCounterAutoDecorator) iCalculator).getCountOperation());
+
+        ICalculator calculatorWithMemory = ((CalculatorWithCounterAutoDecorator) iCalculator).getCalculator();
+        if (calculatorWithMemory instanceof CalculatorWithMemoryDecorator) {
+            ((CalculatorWithMemoryDecorator) calculatorWithMemory).save();
+            double savedOperationResult = ((CalculatorWithMemoryDecorator) calculatorWithMemory).load();
+            System.out.println("Сохраненное значение: " + savedOperationResult);
+        }
     }
 
 }

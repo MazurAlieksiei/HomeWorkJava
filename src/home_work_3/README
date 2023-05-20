@@ -10,4 +10,4 @@ CalculatorWithCounterAutoChoiceAgregation и CalculatorWithCounterDelegateChoice
 ICalculator - задание 10
 CalculatorWithCounterAutoAgregationInterface и CalculatorWithCounterAutoCompositeInterfaceMain - задание 11
 CalculatorWithMemory и CalculatorWithMemoryMain - задание 12
-CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator + CalculatorDecoratorMain - задание 13.1-13.6
+CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator + CalculatorDecoratorMain - задание 13

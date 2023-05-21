@@ -9,12 +9,16 @@ public class TaskAverage {
         int secondNumber = in.nextInt();
         int thirdNumber = in.nextInt();
 
+        System.out.println(getAvaregeNumber(firstNumber, secondNumber, thirdNumber));
+    }
+
+    public static int getAvaregeNumber(int firstNumber, int secondNumber, int thirdNumber) {
         if ((firstNumber > secondNumber && firstNumber < thirdNumber) || (firstNumber < secondNumber && firstNumber > thirdNumber)) {
-            System.out.print(firstNumber);
+            return firstNumber;
         } else if ((secondNumber > firstNumber && secondNumber < thirdNumber) || (secondNumber < firstNumber && secondNumber > thirdNumber)) {
-            System.out.println(secondNumber);
+            return secondNumber;
         } else {
-            System.out.println(thirdNumber);
+            return thirdNumber;
         }
     }
 }

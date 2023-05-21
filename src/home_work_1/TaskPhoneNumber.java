@@ -10,15 +10,16 @@ public class TaskPhoneNumber {
 
         char[] strToArray = userInput.replaceAll(" ", "").toCharArray();
 
-        if (strToArray.length != 10) {
-            System.out.println("Вы ввели неправильное количество цифр!");
-            return;
-        }
-
-        System.out.println(createPhoneNumber(strToArray));
+        System.out.println(createPhoneNumber(userInput));
     }
 
-    public static String createPhoneNumber(char[] strToArray) {
+    public static String createPhoneNumber(String userInput) {
+        char[] strToArray = userInput.replaceAll(" ", "").toCharArray();
+
+        if (strToArray.length != 10) {
+            return "Вы ввели неправильное количество цифр!";
+        }
+
         String phoneNumber;
         phoneNumber = "(" + strToArray[0] + strToArray[1] + strToArray[2] + ")";
         phoneNumber += " " + strToArray[3] + strToArray[4] + strToArray[5];

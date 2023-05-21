@@ -18,7 +18,7 @@ public class TaskToBinaryStringEasyVariant {
         if (number >= 0) {
             binary = String.format("%8s", Integer.toBinaryString(number)).replaceAll(" ", "0");
         } else {
-            binary =  Integer.toBinaryString(number).substring(n);
+            binary = Integer.toBinaryString(number).substring(n);
         }
         return binary;
 

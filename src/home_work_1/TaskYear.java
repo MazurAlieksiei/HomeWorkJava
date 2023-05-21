@@ -8,10 +8,14 @@ public class TaskYear {
         System.out.print("Введите год: ");
         int year = in.nextInt();
 
+        System.out.println(getYear(year));
+    }
+
+    public static String getYear(int year) {
         if ((year % 4 != 0) || (year % 100 == 0 && year % 400 != 0)) {
-            System.out.println("Обычный год");
+            return "Обычный год";
         } else {
-            System.out.println("Високосный год");
+            return "Високосный год";
         }
     }
 }

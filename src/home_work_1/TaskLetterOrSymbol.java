@@ -14,11 +14,14 @@ public class TaskLetterOrSymbol {
 //            System.out.println("Это не буква, а символ " + (char) userInput);
 //        }
 
+        System.out.println(getLetterOrSymbol(userInput));
+    }
 
-        if ((userInput <= 'Z' && userInput >= 'A') || (userInput <= 'z' && userInput >= 'a')){
-            System.out.printf("Это буква %c ", userInput);
+    public static String getLetterOrSymbol(int userInput) {
+        if ((userInput <= 'Z' && userInput >= 'A') || (userInput <= 'z' && userInput >= 'a')) {
+            return "Это буква " + (char) userInput;
         } else {
-            System.out.println("Это не буква, а символ " + (char) userInput);
+            return "Это не буква, а символ " + (char) userInput;
         }
     }
 }

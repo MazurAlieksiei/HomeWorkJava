@@ -10,10 +10,16 @@ public class TaskByteToKbyte {
         System.out.print("Перевести в байты (b) или в килобайты (k) : ");
         String translate = in.next();
 
-        if (translate.equals("b")) {
-            System.out.printf("%d Килобайты = %d байт", number, (number * 1024));
-        } else if (translate.equals("k")) {
-            System.out.printf("%d байт = %.2f Килобайт", number, (number / 1024.0));
+        System.out.println(getByteToKbyte(number, translate));
+    }
+
+    public static String getByteToKbyte(int number, String translate) {
+        switch (translate) {
+            case "b":
+                return number + " Килобайты = " + (number * 1024) + " байт";
+            case "k":
+                return number + " байт = " + (number / 1024.0) + " Килобайт";
         }
+        return "Неправильный ввод";
     }
 }

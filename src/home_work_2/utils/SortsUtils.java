@@ -26,14 +26,13 @@ public class SortsUtils {
      * @param arr передаваемый для сортировки массив
      */
     public static void shake(int[] arr) {
-        int lenOfSorting = arr.length - 1;
         int leftBorder = 0; // левая граница сортируемого массива
-        int rightBorder = lenOfSorting - 1; //  правая граница сортируемого массива
-        int changes = 1; // маркер изменений в цикле
+        int rightBorder = arr.length - 1; //  правая граница сортируемого массива
+        int changes; // маркер изменений в цикле
 
         /*  Цикл выполняется пока левая граница не сомкнётся с правой
          и пока в массиве имеются перемещения */
-        while ((leftBorder < rightBorder) && changes > 0) {
+        do {
             changes = 0;
             for (int i = leftBorder; i < rightBorder; i++) {  //двигаемся слева направо
                 if (arr[i] > arr[i + 1]) { // если следующий элемент меньше текущего, меняем их местами
@@ -44,6 +43,7 @@ public class SortsUtils {
                 }
             }
             rightBorder--; // сдвигаем правую границу на предыдущий элемент
+
             for (int i = rightBorder; i > leftBorder; i--) { //двигаемся справа налево
                 if (arr[i - 1] > arr[i]) { // если предыдущий элемент больше текущего, меняем их местами
                     int tmp = arr[i]; // переменная, в которую сохраняются значения
@@ -53,6 +53,6 @@ public class SortsUtils {
                 }
             }
             leftBorder++; // сдвигаем левую границу на следующий элемент
-        }
+        } while ((leftBorder < rightBorder) && changes == 1);
     }
 }

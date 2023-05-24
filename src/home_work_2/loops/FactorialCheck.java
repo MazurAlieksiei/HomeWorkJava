@@ -1,45 +1,45 @@
 package home_work_2.loops;
 
 public class FactorialCheck {
-    public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Не корректный ввод!");
-            return;
+    public static String getFactorialResult(String args) {
+
+        if (args.isEmpty()) {
+            return "Не корректный ввод!";
         }
 
-        if (!args[0].chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
-            if (args[0].contains("-")){
-                System.out.println("Введено отрицательное число");
-                return;
+        if (!args.chars().allMatch(Character::isDigit)) {
+            if (args.contains("-")) {
+                return "Введено отрицательное число";
             }
-            System.out.println("Не корректный ввод!");
-            return;
+            return "Не корректный ввод!";
         }
 
-        long number = Long.parseLong(args[0]);
+        long number = Long.parseLong(args);
         if (number > 20) {
-            System.out.println("Введите число меньше либо равное 20");
-            return;
-        }
+            return "Введите число меньше либо равное 20";
 
-        System.out.println("Факториал числа: " + getFactorial(number));
+        }
+        return getFactorialCasual(number);
     }
 
     /**
      * Метод вычисления факториала числа.
+     *
      * @param number Числа, факториал которого необходимо вычислить.
      * @return Возвращает значение факториала числа, введенного пользователем.
      */
-    public static long getFactorial(long number) {
+    public static String getFactorialCasual(long number) {
+        String resultAsString = "";
+        StringBuilder stringBuilder = new StringBuilder(resultAsString);
         long result = 1;
         for (long i = 1; i <= number; i++) {
             result = result * i;
             if (i == number) {
-                System.out.print(i + " = ");
+                stringBuilder.append(i + " = ");
                 break;
             }
-            System.out.print(i + " * ");
+            stringBuilder.append(i + " * ");
         }
-        return result;
+        return stringBuilder.toString() + result;
     }
 }

@@ -5,15 +5,15 @@ public interface IArraysOperation {
     /**
      * Метод вывода элементов массива.
      */
-    void elementsOutput ();
+    void elementsOutput(int[] baseArray);
 
     /**
      * Метод вывода каждого второго элемента массива.
      */
-    void everySecondElement ();
+    int[] everySecondElement(int[] baseArray);
 
     /**
      * Метод вывода элементов массива в обратном порядке.
      */
-    void reversElementsOutput ();
+    int[] reversElementsOutput(int[] baseArray);
 }

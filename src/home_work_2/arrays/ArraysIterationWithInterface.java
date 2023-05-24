@@ -1,5 +1,7 @@
 package home_work_2.arrays;
 
+import static home_work_2.utils.ArrayUtils.arrayFromConsole;
+
 public class ArraysIterationWithInterface {
     public static void main(String[] args) {
         DoWhileOperation doWhileOperation = new DoWhileOperation();
@@ -13,12 +15,12 @@ public class ArraysIterationWithInterface {
         executeOperations(forEachOperation);
     }
 
-    public static  void executeOperations (IArraysOperation arraysOperation){
-        arraysOperation.elementsOutput();
+    public static void executeOperations(IArraysOperation arraysOperation) {
+        arraysOperation.elementsOutput(arrayFromConsole());
         System.out.println();
-        arraysOperation.everySecondElement();
+        arraysOperation.everySecondElement(arrayFromConsole());
         System.out.println();
-        arraysOperation.reversElementsOutput();
+        arraysOperation.reversElementsOutput(arrayFromConsole());
         System.out.println();
     }
 }

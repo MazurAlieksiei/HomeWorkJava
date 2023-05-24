@@ -1,36 +1,40 @@
 package home_work_2.arrays;
 
-import static home_work_2.utils.ArrayUtils.arrayFromConsole;
 
 public class ForOperation implements IArraysOperation {
 
     @Override
-    public void elementsOutput() {
+    public void elementsOutput(int[] baseArray) {
         System.out.println("Вывод элементов массива циклом 'for' ");
-        int[] array = arrayFromConsole();
-        for (int i = 0; i < array.length; i++) {
-            int element = array[i];
-            System.out.print(element + " ");
+
+        for (int i = 0; i < baseArray.length; i++) {
+            System.out.print(baseArray[i] + " ");
         }
     }
 
     @Override
-    public void everySecondElement() {
+    public int[] everySecondElement(int[] baseArray) {
         System.out.println("Вывод каждого второго элемента массива циклом 'for' ");
-        int[] array = arrayFromConsole();
-        for (int i = 1; i < array.length; i += 2) {
-            int element = array[i];
-            System.out.print(element + " ");
+        int[] temp = new int[baseArray.length / 2]; // массив, куда будет сохранен каждый второй элемент исходного массива. Размер - исходный / 2, т.к. елементов в 2 раза меньше
+
+        for (int i = 1, j = 0; i < baseArray.length; i += 2, j++) {
+            temp[j] = baseArray[i];
+            System.out.print(baseArray[i] + " ");
         }
+
+        return temp;
     }
 
     @Override
-    public void reversElementsOutput() {
+    public int[] reversElementsOutput(int[] baseArray) {
         System.out.println("Вывод элементов массива в обратном порядке циклом 'for' ");
-        int[] array = arrayFromConsole();
-        for (int i = array.length - 1; i >= 0; i--) {
-            int element = array[i];
-            System.out.print(element + " ");
+        int[] temp = new int[baseArray.length]; // массив, куда будет сохранены элементы исходного массива в обратном порядке
+
+        for (int i = baseArray.length - 1, j = 0; i >= 0; i--, j++) {
+            temp[j] = baseArray[i];
+            System.out.print(baseArray[i] + " ");
         }
+
+        return temp;
     }
 }

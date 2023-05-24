@@ -1,49 +1,15 @@
 package home_work_2.loops;
 
-import java.util.Scanner;
-
 public class LoopsTasks {
-    public static void main(String[] args) {
-
-        largestDigit();
-        System.out.println();
-        evenNumbersProbability();
-        System.out.println();
-        evenAndOddNumbers();
-        System.out.println();
-        fibonacciSeries();
-        System.out.println();
-        rangeOfNumbers();
-        System.out.println();
-        reversNumber();
-    }
 
     /**
-     * Метод находит наибольшую цифру натурального числа, введенного пользователем.
+     * Метод нахождения наибольшей цифры натурального числа.
+     *
+     * @param number Натуральное число.
+     * @return Возвращает наибольшую цифру натурального числа.
      */
-    public static void largestDigit() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите натуральное число: ");
-        String numberAsString = in.nextLine();
+    public static String largestDigit(int number) {
 
-        if (!numberAsString.chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
-            if (numberAsString.contains(".") || numberAsString.contains(",")) { //если введено число с точкой
-                System.out.println("Введено не натуральное число");
-                return;
-            }
-            if (numberAsString.contains("-")) {
-                System.out.println("Введено отрицательное число");
-                return;
-            }
-            System.out.println("Введено не число");
-            return;
-        }
-
-        int number = Integer.parseInt(numberAsString);
-        if (number == 0) {
-            System.out.println("Ноль вводить нельзя!");
-            return;
-        }
         int maxNumber = number % 10;
         number = number / 10;
         while (number > 0) {
@@ -52,11 +18,11 @@ public class LoopsTasks {
             }
             number /= 10; //убираем последнюю цифру числа делением на 10
         }
-        System.out.println("Максимальная цифра числа: " + maxNumber);
+        return "Максимальная цифра числа: " + maxNumber;
     }
 
     /**
-     * Метод находит вероятность генерации четных случайных чисел.
+     * Метод нахождения вероятность генерации четных случайных чисел.
      */
     public static void evenNumbersProbability() {
         int digitsAmount = 1000;
@@ -72,31 +38,12 @@ public class LoopsTasks {
     }
 
     /**
-     * Метод считает четные и нечетные цифры числа, введенного пользователем.
+     * Метод считывания четных и нечетных цифры числа.
+     *
+     * @param number Число, цифры которого считаются.
+     * @return Возвращает четные и нечетные цифры числа, введенного пользователем.
      */
-    public static void evenAndOddNumbers() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите натуральное число: ");
-        String numberAsString = in.nextLine();
-
-        if (!numberAsString.chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
-            if (numberAsString.contains(".") || numberAsString.contains(",")) { //если введено число с точкой
-                System.out.println("Введено не натуральное число");
-                return;
-            }
-            if (numberAsString.contains("-")) {
-                System.out.println("Введено отрицательное число");
-                return;
-            }
-            System.out.println("Введено не число");
-            return;
-        }
-
-        int number = Integer.parseInt(numberAsString);
-        if (number == 0) {
-            System.out.println("Ноль вводить нельзя!");
-            return;
-        }
+    public static String evenAndOddNumbers(int number) {
 
         int even = 0;
         int odd = 0;
@@ -108,58 +55,61 @@ public class LoopsTasks {
             }
             number /= 10;
         }
-        System.out.println("четных " + even + ", нечетных " + odd);
+        return "четных " + even + ", нечетных " + odd;
     }
 
     /**
-     * Метод выводит элементы ряда Фибоначчи, количество которых указано пользователем.
+     * Метод выведения элементов ряда Фибоначчи.
+     *
+     * @param numberOfElements Количество элементов.
+     * @return Возвращает элементы ряда Фибоначчи.
      */
-    public static void fibonacciSeries() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Укажите сколько элементов ряда Фибоначчи вывести: ");
-        int numberOfElements = in.nextInt();
+    public static String fibonacciSeries(int numberOfElements) {
+        String a = "1 2 ";
+        StringBuilder stringBuilder = new StringBuilder(a);
         int element1 = 1;
         int element2 = 2;
         int b;
-        System.out.print(element1 + " " + element2 + " ");
+
         for (int i = 3; i <= numberOfElements; i++) {
-            System.out.print((element1 + element2) + " ");
+            stringBuilder.append((element1 + element2) + " ");
             b = element1;
             element1 = element2;
             element2 = b + element1;
         }
+        return stringBuilder.toString();
     }
 
     /**
-     * Метод выводит ряд чисел в диапазоне с шагом. "От" и "до", и "шаг" указывается пользователем.
+     * Метод выведения ряда чисел в определенном диапазоне с шагом.
+     *
+     * @param minValue Нижняя граница диапазона.
+     * @param maxValue Верхняя граница диапазона.
+     * @param step     Шаг.
+     * @return Возвращает ряд чисел в определенном диапазоне с шагом.
      */
-    public static void rangeOfNumbers() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите минимальное число: ");
-        int minValue = in.nextInt();
-        System.out.print("Введите максимальное число: ");
-        int maxValue = in.nextInt();
-        System.out.print("Введите шаг: ");
-        int step = in.nextInt();
-
+    public static String rangeOfNumbers(int minValue, int maxValue, int step) {
+        String a = "";
+        StringBuilder stringBuilder = new StringBuilder(a);
         for (int i = minValue; i <= maxValue; i += step) {
-            System.out.print(i + " ");
+            stringBuilder.append(i + " ");
         }
+        return stringBuilder.toString();
     }
 
     /**
-     * Метод выводит перевернутое число. Число, переворот которого требуется, вводит пользователь.
+     * Метод переворота числа. Число, переворот которого требуется, вводит пользователь.
+     *
+     * @param number Число, переворот которого требуется.
+     * @return Возвращает перевернутое число.
      */
-    public static void reversNumber() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите число для переворота: ");
-        int number = in.nextInt();
+    public static int reversNumber(int number) {
 
         int reversNumber = 0;
         while (number > 0) {
             reversNumber = reversNumber * 10 + number % 10;
             number /= 10;
         }
-        System.out.println(reversNumber);
+        return reversNumber;
     }
 }

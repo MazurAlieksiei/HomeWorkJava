@@ -1,53 +1,71 @@
 package home_work_2.loops;
 
+
 public class NumberDigitsMultiplication {
-    public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Не корректный ввод!");
-            return;
+
+    public static String numberDigitsMultiplicationCheckAndReturn(String args) {
+
+        String number = args;
+        if (number.isEmpty()) {
+            return "Не корректный ввод!";
         }
 
-        if (!args[0].chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
-            if (args[0].contains(".") || args[0].contains(",")){ //если введено число с точкой
-                System.out.println("Введено не целое число");
-                return;
+        if (!number.chars().allMatch(Character::isDigit)) { //проверка на то, является ли все символы в строке цифрами
+            if (number.contains(".") || number.contains(",")) { //если введено число с точкой
+                return "Введено не целое число";
             }
-            if (args[0].contains("-")){
-                System.out.println("Введено отрицательное число");
-                return;
+            if (number.contains("-")) {
+                return "Введено отрицательное число";
             }
-            System.out.println("Введено не число");
-            return;
+            return "Введено не число";
         }
 
-        long number = Long.parseLong(args[0]);
-        System.out.println(sumDigits(number));
+
+        return stringFormating(number);
     }
 
-    /**
-     * Метод перемножения всех цифр числа между собой.
-     * @param number Число, цифры которого необходимо перемножить.
-     * @return Возвращает результат перемножения всех цифр числа.
-     */
-    public static long sumDigits (long number){
-        String numberAsString = Long.toString(number);
-        long[] digitsArray = new long[numberAsString.length()];
-        long num = number;
-        long result = 1;
-        int i = digitsArray.length -1;
+    public static long[] sumDigits(String number) {
+
+
+        long[] digitsArray = new long[number.length()];
+        long num = Long.parseLong(number);
+        int i = digitsArray.length - 1;
         while (num > 0) {
-            result *= num % 10;
             digitsArray[i] = num % 10;
             num = num / 10;
             i--;
         }
-        for (int j = 0; j < digitsArray.length; j++) {
-            if (j == digitsArray.length - 1) {
-                System.out.print(digitsArray[j] + " = ");
+        return digitsArray;
+    }
+
+    /**
+     * Метод перемножения всех цифр числа между собой.
+     *
+     * @param number Число, цифры которого необходимо перемножить.
+     * @return Возвращает результат перемножения всех цифр числа.
+     */
+    public static String stringFormating(String number) {
+
+
+        long[] digitsArray1 = sumDigits(number);
+
+        String resultAsString = "";
+        StringBuilder stringBuilder = new StringBuilder(resultAsString);
+        long num = Long.parseLong(number);
+        long result = 1;
+        for (int j = 0; j < digitsArray1.length; j++) {
+
+            result *= num % 10;
+            num = num / 10;
+            if (j == digitsArray1.length - 1) {
+                stringBuilder.append(digitsArray1[j] + " = ");
                 break;
             }
-            System.out.print(digitsArray[j] + " * ");
+            stringBuilder.append(digitsArray1[j] + " * ");
         }
-        return result;
+
+        return stringBuilder.toString() + result;
     }
+
+
 }

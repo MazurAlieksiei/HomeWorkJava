@@ -1,20 +1,23 @@
 package home_work_2.loops;
 
 public class MultiplicationTableFirstTry {
-    public static void main(String[] args) {
-        System.out.println("Таблица умножения");
+
+    /**
+     * Метод формирования таблицы умножения.
+     *
+     * @param from Число, с которого формируется таблица умножения.
+     * @param to   Число, до которого формируется таблица умножения.
+     * @return Возвращает таблицу умножения.
+     */
+    public static String printRow(int from, int to) {
+        String result = "";
+        StringBuilder stringBuilder = new StringBuilder(result);
         for (int i = 1; i <= 10; i++) {
-            for (int j = 2; j <= 5 ; j++) {
-                System.out.print(j + " * " + i + " = " + (i * j) + "\t" );
+            for (int j = from; j <= to; j++) {
+                stringBuilder.append(j + " * " + i + " = " + (i * j) + "\t");
             }
-            System.out.println();
+            stringBuilder.append("\n");
         }
-        System.out.println();
-         for (int i = 1; i <= 10; i++) {
-            for (int j = 6; j <= 9 ; j++) {
-                System.out.print(j + " * " + i + " = " + (i * j) + "\t" );
-            }
-            System.out.println();
-        }
+        return stringBuilder.toString();
     }
 }

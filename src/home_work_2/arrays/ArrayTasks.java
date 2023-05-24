@@ -1,6 +1,5 @@
 package home_work_2.arrays;
 
-import java.sql.PseudoColumnUsage;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -29,16 +28,19 @@ public class ArrayTasks {
         int maxValueExclusion = 100;
         int[] array = arrayRandom(size, maxValueExclusion);
 
+        System.out.println(Arrays.toString(array));
+        System.out.println(sumOddElementsInternal(array));
+    }
+
+    public static String sumOddElementsInternal(int[] array) {
         int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0 && array[i] > 0) {
                 sum = sum + array[i];
             }
-            System.out.print(array[i] + " ");
         }
-        System.out.println();
-        System.out.println("Сумма равна: " + sum);
+        return "Сумма равна: " + sum;
     }
 
     /**
@@ -49,13 +51,17 @@ public class ArrayTasks {
         int maxValueExclusion = 100;
         int[] array = arrayRandom(size, maxValueExclusion);
 
+        System.out.println(maxFromOddElementsInternal(array));
+    }
+
+    public static String maxFromOddElementsInternal(int[] array) {
         int maxElement = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maxElement) {
                 maxElement = array[i];
             }
         }
-        System.out.println("Максимальный элемент: " + maxElement);
+        return "Максимальный элемент: " + maxElement;
     }
 
     /**
@@ -67,27 +73,38 @@ public class ArrayTasks {
         int maxValueExclusion = 100;
         int[] array = arrayRandom(size, maxValueExclusion);
 
+        System.out.println("Среднее арифметическое: " + lessArithmeticMeanInternal(array));
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < lessArithmeticMeanInternal(array)) {
+                System.out.print(array[i] + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    public static int lessArithmeticMeanInternal(int[] array) {
+
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
         int arithmeticMean = sum / array.length;
-        System.out.println("Среднее арифметическое: " + arithmeticMean);
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < arithmeticMean) {
-                System.out.print(array[i] + " ");
-            }
-        }
+        return arithmeticMean;
     }
 
-    /** Метод находит два наименьших (минимальных) элемента массива.
+    /**
+     * Метод находит два наименьших (минимальных) элемента массива.
      * Массив заполняется случайными числами.
      */
     public static void twoSmallestElements() {
-        int size = 10;
+        int size = 50;
         int maxValueExclusion = 100;
         int[] array = arrayRandom(size, maxValueExclusion);
 
+        System.out.println(twoSmallestElementsInternal(array));
+    }
+
+    public static String twoSmallestElementsInternal(int[] array) {
         int min1;
         int min2;
         int buff;
@@ -110,12 +127,11 @@ public class ArrayTasks {
                 min2 = i;
             }
         }
-        System.out.println();
-        System.out.println("Первый элемент: " + array[min1]);
-        System.out.println("Второй элемент: " + array[min2]);
+        return "Первый элемент: " + array[min1] + "\nВторой элемент: " + array[min2];
     }
 
-    /** Метод сжимает массив, удалив элементы, принадлежащие интервалу.
+    /**
+     * Метод сжимает массив, удалив элементы, принадлежащие интервалу.
      * Массив заполняется случайными числами.
      */
     public static void arrayCompression() {
@@ -130,6 +146,14 @@ public class ArrayTasks {
         System.out.print("Верхняя граница: ");
         int hBorder = in.nextInt();
 
+
+        for (int element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    public static int[] arrayCompressionInternal(int[] array, int hBorder, int lBorder) {
         int i = 0;
         int m = array.length;
         while (i < m) {
@@ -142,22 +166,22 @@ public class ArrayTasks {
                 i += 1;
             }
         }
-
-        int[] array2 = Arrays.copyOfRange(array, 0, m);
-        for (int element : array2) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
+        return Arrays.copyOfRange(array, 0, m);
     }
 
-    /** Метод находит сумму цифр массива.
+    /**
+     * Метод находит сумму цифр массива.
      * Массив заполняется случайными числами.
      */
     public static void sumOfDigits() {
-        int size = 10;
+        int size = 50;
         int maxValueExclusion = 100;
         int[] array = arrayRandom(size, maxValueExclusion);
 
+        System.out.println(sumOfDigitsInternal(array));
+    }
+
+    public static String sumOfDigitsInternal(int[] array) {
         int sum = 0;
 
         for (int j = 0; j < array.length; j++) {
@@ -167,6 +191,6 @@ public class ArrayTasks {
                 num = num / 10;
             }
         }
-        System.out.println("Сумма все цифр: " + sum);
+        return "Сумма всеx цифр: " + sum;
     }
 }

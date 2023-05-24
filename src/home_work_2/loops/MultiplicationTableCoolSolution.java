@@ -24,7 +24,7 @@ public class MultiplicationTableCoolSolution {
 
             int tmp = countColumns - (maxCountColumnsInRow * i); /* дополнительная переменная, хранящая значение
             желаемого количества столбцов */
-            if (tmp < maxCountColumnsInRow){ // если желаемое количество столбцов больше максимального в одной строке
+            if (tmp < maxCountColumnsInRow) { // если желаемое количество столбцов больше максимального в одной строке
                 currentTo = startNumber + (maxCountColumnsInRow * i) + tmp - 1;
             }
 
@@ -38,10 +38,11 @@ public class MultiplicationTableCoolSolution {
 
     /**
      * Печать строки в консоль с указанными столбцами
+     *
      * @param from столбец, с которого начинается строка
-     * @param to столбец, которым заканчивается строка
+     * @param to   столбец, которым заканчивается строка
      */
-    public static void printRow (int from, int to) {
+    public static void printRow(int from, int to) {
         for (int i = 1; i <= 10; i++) {
             for (int j = from; j <= to; j++) {
                 System.out.print(j + " * " + i + " = " + (i * j) + "\t");

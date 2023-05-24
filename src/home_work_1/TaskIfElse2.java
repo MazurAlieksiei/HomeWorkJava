@@ -1,6 +1,5 @@
 package home_work_1;
 
-import java.util.Scanner;//импрортируем класс Scanner из пакета java.util
 
 public class TaskIfElse2 implements ICommunicationPrinter {
 
@@ -12,11 +11,11 @@ public class TaskIfElse2 implements ICommunicationPrinter {
         }
 
         if (name.equals("Вася")) {
-            return name = "Привет! \nЯ тебя так долго ждал";
+            return  "Привет! \nЯ тебя так долго ждал";
         } else if (name.equals("Анастасия")) {
-            return name = "Я тебя так долго ждал";
+            return "Я тебя так долго ждал";
         } else {
-            return name = "Добрый день, а вы кто?";
+            return "Добрый день, а вы кто?";
         }
     }
 

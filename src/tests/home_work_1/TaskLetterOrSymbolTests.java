@@ -1,6 +1,5 @@
 package tests.home_work_1;
 
-import home_work_1.TaskAverage;
 import home_work_1.TaskLetterOrSymbol;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

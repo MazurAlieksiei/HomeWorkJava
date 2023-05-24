@@ -1,0 +1,36 @@
+
+ICommunicationPrinter  - задание 9.1 ДЗ1
+TaskIfElse1, TaskIfElse2, TaskSwitch - задание 9.2 ДЗ1
+TaskOddNumbersTests- тест задания 4.1 ДЗ1
+TaskAverageTests - тест задания 4.2 ДЗ1
+TaskDivisibilityTests - тест задания 4.3 ДЗ1
+TaskByteToKbyteTests - тест задания 4.4 ДЗ1
+TaskLetterOrSymbolTests - тест задания 4.5 ДЗ1
+TaskYearTests - тест задания 4.6 ДЗ1
+TaskSleepOrNotTests - тест задания 5 ДЗ1
+TaskIfElse1Tests, TaskIfElse2Tests, TaskSwitchTests - тест задания 6 ДЗ1
+TaskPhoneNumberTests- тест задания 7 ДЗ1
+
+
+Задание 5 ДЗ2:
+FactorialCheckTests - тест задания 1.1.1 ДЗ2
+FactorialRecursionTests - тест задания 1.1.2 ДЗ2
+NumberDigitsMultiplicationTests - тест задания 1.2 ДЗ2
+DegradingTests - тест задания 1.3 ДЗ2
+MultiplyLongTests - тест задания 1.4 ДЗ2
+LoopsTasksTests - тест задания 1.5 ДЗ2
+MultiplicationTableFirstTryTests - тест задания 1.6 ДЗ2
+Задание 6 ДЗ2:
+DoWhileOperationTests - тест задания 2.3.1 ДЗ2
+WhileOperationTests - тест задания 2.3.2 ДЗ2
+ForOperationTests - тест задания 2.3.3 ДЗ2
+ForEachOperationTests - тест задания 2.3.4 ДЗ2
+Задание 7 ДЗ2:
+ArrayTasksTests - тест задания 2.4 ДЗ2
+Задание 8 ДЗ2:
+SortsUtilsTests - тест задания 4.1 ДЗ2
+
+Задание 15 ДЗ3:
+CalculatorWithCounterAutoAgregationInterfaceTests - тест задания 11 ДЗ3
+CalculatorWithMemoryTests - тест задания 12 ДЗ3
+CalculatorWithCounterAutoDecoratorTests, CalculatorWithMemoryDecoratorTests - тест задания 13 ДЗ3

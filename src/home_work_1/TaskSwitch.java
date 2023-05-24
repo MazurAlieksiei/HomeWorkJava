@@ -1,6 +1,5 @@
 package home_work_1;
 
-import java.util.Scanner; //импрортируем класс Scanner из пакета java.util
 
 public class TaskSwitch implements ICommunicationPrinter {
 

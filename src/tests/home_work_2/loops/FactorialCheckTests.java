@@ -1,7 +1,6 @@
 package tests.home_work_2.loops;
 
 import home_work_2.loops.FactorialCheck;
-import home_work_2.loops.FactorialRecursion;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -22,14 +21,14 @@ public class FactorialCheckTests {
     @CsvSource({"-3 , Введено отрицательное число",
             "1f, Не корректный ввод!"})
     public void getFactorialResult_WrongInput_ReturnErrorResult(String number, String expected) {
-        String result = FactorialRecursion.getFactorialResult(number);
+        String result = FactorialCheck.getFactorialResult(number);
         Assertions.assertEquals(expected, result);
     }
 
     @Test
     public void getFactorialResult_NullInput_ReturnErrorResult() {
         String number = "";
-        String result = FactorialRecursion.getFactorialResult(number);
+        String result = FactorialCheck.getFactorialResult(number);
         Assertions.assertEquals("Не корректный ввод!", result);
     }
 }

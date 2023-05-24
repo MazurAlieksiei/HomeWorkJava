@@ -15,13 +15,13 @@ public class TaskAverageTests {
     @Test
     public void getAvaregeNumber_NegativeNumbersInput_ReturnsValidResult() {
         int result = TaskAverage.getAvaregeNumber(-1, -2, -3);
-        Assertions.assertEquals(-555, result);
+        Assertions.assertEquals(-2, result);
     }
 
     @Test
     public void getAvaregeNumber_SameNumbersInput_ReturnsValidResult() {
         int result = TaskAverage.getAvaregeNumber(2, 2, 2);
-        Assertions.assertEquals(5555, result);
+        Assertions.assertEquals(2, result);
     }
 
     @Test

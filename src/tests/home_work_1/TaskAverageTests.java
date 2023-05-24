@@ -15,7 +15,7 @@ public class TaskAverageTests {
     @Test
     public void getAvaregeNumber_NegativeNumbersInput_ReturnsValidResult() {
         int result = TaskAverage.getAvaregeNumber(-1, -2, -3);
-        Assertions.assertEquals(-2, result);
+        Assertions.assertEquals(-555, result);
     }
 
     @Test

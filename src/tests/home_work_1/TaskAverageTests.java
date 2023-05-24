@@ -21,7 +21,7 @@ public class TaskAverageTests {
     @Test
     public void getAvaregeNumber_SameNumbersInput_ReturnsValidResult() {
         int result = TaskAverage.getAvaregeNumber(2, 2, 2);
-        Assertions.assertEquals(2, result);
+        Assertions.assertEquals(5555, result);
     }
 
     @Test

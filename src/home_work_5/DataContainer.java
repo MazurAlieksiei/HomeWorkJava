@@ -110,7 +110,7 @@ public class DataContainer<T> {
     }
 
     /**
-     * Метод сортировки данных записанных в поле.
+     * Метод сортировки данных контейнера, с использованием переданной реализации сравнения.
      *
      * @param comparator реализация сравнения из ПЕРЕДАННОГО объекта comparator.
      */
@@ -118,9 +118,39 @@ public class DataContainer<T> {
         for (int i = 0; i < data.length - 1; i++) {
             for (int j = data.length - 1; j > i; j--) { // цикл перебирает элементы массива с конца
                 if (comparator.compare(data[j - 1], data[j]) > 0) { // // если текущий элемент меньше предыдущего, меняем их местами
-                    T change = data[j - 1]; // переменная, в которую сохраняется значение
-                    data[j - 1] = data[j];
-                    data[j] = change;
+                    swap(data, j - 1, j);
+                }
+            }
+        }
+    }
+
+    /**
+     * Метод сортировки данных контейнера. Использует реализацию сравнения хранимых объектов.
+     *
+     * @param container Контейнер.
+     */
+    public static void sort(DataContainer<? extends Comparable> container) {
+        for (int i = 0; i < container.data.length - 1; i++) {
+            for (int j = container.data.length - 1; j > i; j--) { // цикл перебирает элементы массива с конца
+                if (container.data[j - 1].compareTo(container.data[j]) > 0) { // // если текущий элемент меньше предыдущего, меняем их местами
+                    swap(container.data, j - 1, j);
+                }
+            }
+        }
+    }
+
+    /**
+     * Метод сортировки данных контейнера. Используется переданная реализация сравнения.
+     *
+     * @param container  Контейнер.
+     * @param comparator Реализация сравнения.
+     * @param <E>        Тип элементов контейнера.
+     */
+    public static <E> void sort(DataContainer<E> container, Comparator<E> comparator) {
+        for (int i = 0; i < container.data.length - 1; i++) {
+            for (int j = container.data.length - 1; j > i; j--) { // цикл перебирает элементы массива с конца
+                if (comparator.compare(container.data[j - 1], container.data[j]) > 0) { // // если текущий элемент меньше предыдущего, меняем их местами
+                    swap(container.data, j - 1, j);
                 }
             }
         }
@@ -141,5 +171,19 @@ public class DataContainer<T> {
         newrray[newrray.length - 1] = item;
         data = newrray;
         return newrray.length - 1;
+    }
+
+    /**
+     * Метод перестановки элементов массива.
+     *
+     * @param array  Массив элементов.
+     * @param index1 Индекс первого элемента.
+     * @param index2 Индекс второго элемента.
+     * @param <U>    Тип элементов массива.
+     */
+    private static <U> void swap(U[] array, int index1, int index2) {
+        U change = array[index1]; // переменная, в которую сохраняется значение
+        array[index1] = array[index2];
+        array[index2] = change;
     }
 }

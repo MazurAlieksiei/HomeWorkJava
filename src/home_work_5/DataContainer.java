@@ -17,7 +17,7 @@ public class DataContainer<T> {
      * @param item Элемент, необходимый к добавлению.
      * @return Возвращает номер позиции в которую был вставлен элемент.
      */
-    int add(T item) {
+    public int add(T item) {
         if (item == null) {
             return -1;
         }
@@ -37,7 +37,7 @@ public class DataContainer<T> {
      * @param index Индекс элемента сохраненного объект.
      * @return Возвращает предварительно сохранённый объект.
      */
-    T get(int index) {
+    public T get(int index) {
         if (!(index >= 0 && index <= data.length - 1)) {
             return null;
         }
@@ -49,7 +49,7 @@ public class DataContainer<T> {
      *
      * @return Возвращает массив данных из поля.
      */
-    T[] getItems() {
+    public T[] getItems() {
         return data;
     }
 
@@ -59,7 +59,7 @@ public class DataContainer<T> {
      * @param index Индекс элемента, который необходимо удалить.
      * @return Возвращает true, если объект удален. Возвращает false, если объект не удален.
      */
-    boolean delete(int index) {
+    public boolean delete(int index) {
         if (!(index >= 0 && index <= data.length - 1)) {
             return false;
         }
@@ -77,7 +77,7 @@ public class DataContainer<T> {
      * @param item Элемент, который необходимо удалить.
      * @return Возвращает true, если элемент удален. Возвращает false, если элемент не удален либо передано null.
      */
-    boolean delete(T item) {
+    public boolean delete(T item) {
         if (item == null) {
             return false;
         }

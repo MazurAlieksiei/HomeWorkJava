@@ -1,5 +1,7 @@
-package home_work_6;
+package home_work_6.runners;
 
+import home_work_6.api.ISearchEngine;
+import home_work_6.utils.EasySearch;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

@@ -1,5 +1,7 @@
-package home_work_6;
+package home_work_6.runners;
 
+import home_work_6.api.ISearchEngine;
+import home_work_6.utils.EasySearch;
 import java.io.*;
 import java.util.Scanner;
 
@@ -7,9 +9,9 @@ public class BigAmountFiles {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите адрес папки, из которой мы будет считывать файлы: ");
-        String directiryPath = in.nextLine();
+        String directoryPath = in.nextLine();
 
-        File dir = new File(directiryPath);
+        File dir = new File(directoryPath);
         if (!dir.exists() && !dir.isDirectory()) {
             System.out.println("Неверная директория.");
             return;
@@ -34,7 +36,7 @@ public class BigAmountFiles {
                 break;
             }
 
-            String pathToFile = directiryPath + "/" + selectedFile;
+            String pathToFile = directoryPath + "/" + selectedFile;
             File file = new File(pathToFile);
             StringBuilder builder = new StringBuilder();
 

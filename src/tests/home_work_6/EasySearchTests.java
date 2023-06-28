@@ -84,4 +84,19 @@ public class EasySearchTests {
         long result = searchEngine.search(text, word);
         Assertions.assertEquals(0, result);
     }
+
+    //    @Test
+//    public void sesrch_1 (){
+//        String text = "приветпривет";
+//        String word = "привет";
+//        long result = searchEngine.search(text, word);
+//        Assertions.assertEquals(0, result);
+//    }
+//
+    @ParameterizedTest
+    @CsvSource({"раз, раз, 1", "разочек, разочек, 1", "облом, да, 0"})
+    public void sesrch_OneSeqchWordString(String text, String word, int expected) {
+        long result = searchEngine.search(text, word);
+        Assertions.assertEquals(expected, result);
+    }
 }

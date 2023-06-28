@@ -1,7 +1,5 @@
 package home_work_6.runners;
 
-import home_work_6.api.ISearchEngine;
-import home_work_6.utils.EasySearch;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -59,10 +57,5 @@ public class WarAndPeace {
             Map.Entry<String, Integer> data = sortedList.get(i);
             System.out.println(data.getKey() + " - " + data.getValue() + " раз");
         }
-
-        ISearchEngine search = new EasySearch();
-        System.out.println("Слово \"война\" в тексте встречается: " + search.search(textAsstring, "война"));
-        System.out.println("Союз \"и\" в тексте встречается: " + search.search(textAsstring, "и"));
-        System.out.println("Слово \"мир\" в тексте встречается: " + search.search(textAsstring, "мир"));
     }
 }

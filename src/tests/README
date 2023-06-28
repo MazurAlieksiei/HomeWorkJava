@@ -34,3 +34,6 @@ SortsUtilsTests - тест задания 4.1 ДЗ2
 CalculatorWithCounterAutoAgregationInterfaceTests - тест задания 11 ДЗ3
 CalculatorWithMemoryTests - тест задания 12 ДЗ3
 CalculatorWithCounterAutoDecoratorTests, CalculatorWithMemoryDecoratorTests - тест задания 13 ДЗ3
+
+Задание 6 ДЗ6:
+EasySearchTests - тест задания 4.1 ДЗ6

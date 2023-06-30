@@ -11,3 +11,4 @@ RegExSearchTests - тест задания 4.2 (задание 6)
 SearchEngineNoRegisterTests - тест задания 4.4 (задание 6)
 SearchEngineCaseNormalizerTests - тест задания 4.5 (задание 6)
 BigAmountFiles - задание 7
+BigAmountFilesWithThreads - задание 8

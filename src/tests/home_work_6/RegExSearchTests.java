@@ -1,15 +1,15 @@
 package tests.home_work_6;
 
-import home_work_6.utils.EasySearch;
 import home_work_6.api.ISearchEngine;
+import home_work_6.utils.RegExSearch;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class EasySearchTests {
+public class RegExSearchTests {
 
-    ISearchEngine searchEngine = new EasySearch();
+    ISearchEngine searchEngine = new RegExSearch();
 
     @ParameterizedTest
     @CsvSource({"Мама мыла раму, мыл, 0 ",
@@ -30,7 +30,7 @@ public class EasySearchTests {
 
     @ParameterizedTest
     @CsvSource({"губка.боб, губка, 1 ", "'губка,боб', губка, 1 ", "губка!боб, губка, 1 ", "губка?боб, губка, 1 ",
-            "губка:боб, губка, 1 ", "губка;боб, губка, 1 ", "губка_боб, губка, 1 ", "губка-боб, губка, 0 "})
+            "губка:боб, губка, 1 ", "губка;боб, губка, 1 "})
     public void search_WordsWithPunctuationsInput_SearchFirst(String text, String word, int expected) {
         long result = searchEngine.search(text, word);
         Assertions.assertEquals(expected, result);
@@ -39,15 +39,14 @@ public class EasySearchTests {
     @ParameterizedTest
     @CsvSource({"скидвард.осьминог, осьминог, 1 ", "'скидвард,осьминог', осьминог, 1 ", "скидвард!осьминог, осьминог, 1 ",
             "скидвард?осьминог, осьминог, 1 ", "скидвард:осьминог, осьминог, 1 ",
-            "скидвард;осьминог, осьминог, 1 ", "скидвард_осьминог, осьминог, 1 ",
-            "скидвард-осьминог, скидвард-осьминог, 1 "})
+            "скидвард;осьминог, осьминог, 1 ", "скидвард-осьминог, скидвард-осьминог, 1 "})
     public void search_WordsWithPunctuationsInput_SearchSecond(String text, String word, int expected) {
         long result = searchEngine.search(text, word);
         Assertions.assertEquals(expected, result);
     }
 
     @ParameterizedTest
-    @CsvSource({"что что-то и что-нибудь, что, 1 ", "бабушка бабушке бабушку, бабушк, 0",
+    @CsvSource({"бабушка бабушке бабушку, бабушк, 0",
             "дома домохозяйка делает домашние дела, дом, 0 "})
     public void search_WordsWithSameLetters_Partially(String text, String word, int expected) {
         long result = searchEngine.search(text, word);
@@ -55,7 +54,7 @@ public class EasySearchTests {
     }
 
     @ParameterizedTest
-    @CsvSource({" , что, 0 ", "бабушка бабушке бабушку, , 0"})
+    @CsvSource({"'' , что, 0 ", "бабушка бабушке бабушку, , 0"})
     public void search_EmptyInput(String text, String word, int expected) {
         long result = searchEngine.search(text, word);
         Assertions.assertEquals(expected, result);
@@ -85,14 +84,14 @@ public class EasySearchTests {
         Assertions.assertEquals(0, result);
     }
 
-    //    @Test
-//    public void sesrch_1 (){
-//        String text = "приветпривет";
-//        String word = "привет";
-//        long result = searchEngine.search(text, word);
-//        Assertions.assertEquals(0, result);
-//    }
-//
+    @Test
+    public void sesrch_GluedSameWords() {
+        String text = "приветпривет";
+        String word = "привет";
+        long result = searchEngine.search(text, word);
+        Assertions.assertEquals(0, result);
+    }
+
     @ParameterizedTest
     @CsvSource({"раз, раз, 1", "разочек, разочек, 1", "облом, да, 0"})
     public void sesrch_OneSeqchWordString(String text, String word, int expected) {

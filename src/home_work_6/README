@@ -1,5 +1,14 @@
 WarAndPeace - задания 2, 5.1
 ISearchEngine - задание 3
 EasySearch - задание 4.1
+RegExSearch - задание 4.2
+SearchEnginePunctuationNormalizer - задание 4.3
+SearchEngineNoRegister - задание 4.4
+SearchEngineCaseNormalizer - - задание 4.5
+FindWordsCountTask - задание 5
 EasySearchTests - тест задания 4.1 (задание 6)
+RegExSearchTests - тест задания 4.2 (задание 6)
+SearchEngineNoRegisterTests - тест задания 4.4 (задание 6)
+SearchEngineCaseNormalizerTests - тест задания 4.5 (задание 6)
 BigAmountFiles - задание 7
+BigAmountFilesWithThreads - задание 8
